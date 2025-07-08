@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+  /* background-color: hsl(13, 31%, 94%); */
+}
+
+body {
+  background-color: hsl(13, 31%, 94%);
+}
+
+.body {
+  /*  background-color: hsl(13, 31%, 94%); */
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  display: flex;
+  gap: 30px;
+}
+
+.main h1.heading {
+  padding-bottom: 20px;
+}
+.main .productPart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* border: 1px solid green; */
+}
+.main .productPart .product {
+  flex: 1 1 calc(33% - 50px);
+  /* border: 1px solid red; */
+  /* .imgDeskTop {
+    display: none;
+  } */
+}
+.main .productPart .product .productImg {
+  width: 100%;
+  height: 70%;
+  border-radius: 20px;
+}
+.main .productPart .product .imgTablet {
+  display: none;
+}
+.main .productPart .product .imgMobile {
+  display: none;
+}
+.main .productPart .product .contentDiv {
+  position: relative;
+  padding-top: 15px;
+}
+.main .productPart .product .contentDiv .productTag {
+  color: hsl(7, 20%, 60%);
+}
+.main .productPart .product .contentDiv .productName {
+  color: hsl(14, 65%, 9%);
+}
+.main .productPart .product .contentDiv .productPrice {
+  color: hsl(20, 100%, 39%);
+}
+.main .productPart .product .contentDiv .btnDiv {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.main .productPart .product .contentDiv .btnDiv .addBtn {
+  position: absolute;
+  top: -30%;
+  /* width: 50%; */
+  min-width: 150px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid hsl(7, 20%, 60%);
+  background-color: hsl(20, 50%, 98%);
+  cursor: pointer;
+}
+.main .productPart .product .contentDiv .btnDiv .quantityControl {
+  position: absolute;
+  top: -30%;
+  /* width: 50%; */
+  padding: 5px 20px;
+  border-radius: 20px;
+  min-width: 150px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid hsl(7, 20%, 60%);
+  background-color: hsl(20, 50%, 98%);
+  background-color: hsl(20, 100%, 39%);
+  color: hsl(20, 50%, 98%);
+}
+.main .productPart .product .contentDiv .btnDiv .quantityControl .quantityIncrement,
+.main .productPart .product .contentDiv .btnDiv .quantityControl .quantityDecrement {
+  background-color: inherit;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  color: hsl(20, 50%, 98%);
+  border: 1px solid hsl(20, 50%, 98%);
+  border-radius: 20px;
+}
+
+.cart {
+  background-color: hsl(20, 50%, 98%);
+  min-width: 300px;
+  padding: 20px;
+}
+.cart header.cartProductTotal {
+  color: hsl(20, 70%, 40%);
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+.cart div.emptyCart {
+  text-align: center;
+  display: block;
+}
+.cart div.emptyCart p {
+  font-size: 0.9rem;
+}
+.cart .cartProductDiv .cartProduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid hsl(7, 20%, 60%);
+}
+.cart .cartProductDiv .cartProduct .productName {
+  padding-bottom: 5px;
+}
+.cart .cartProductDiv .cartProduct .productQuantity,
+.cart .cartProductDiv .cartProduct .productUnit {
+  color: hsl(20, 70%, 40%);
+}
+.cart .cartProductDiv .cartProduct .productUnit {
+  padding-right: 5px;
+}
+.cart .cartProductDiv .cartProduct .atsign,
+.cart .cartProductDiv .cartProduct .cartSingleProductPrice {
+  color: hsl(7, 20%, 60%);
+  padding-right: 5px;
+}
+.cart .cartProductDiv .cartProduct button {
+  width: 20px;
+  cursor: pointer;
+  border: 1px solid gray;
+  height: 20px;
+  border-radius: 50%;
+}
+.cart .cartTotal {
+  /* display: flex; */
+  display: none;
+  justify-content: space-between;
+  padding: 15px;
+}
+.cart .submitDiv {
+  /* display: block; */
+  display: none;
+}
+.cart .submitDiv .carbon-neutral {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  background: hsl(13, 31%, 94%);
+}
+.cart .submitDiv .submitBtn {
+  width: 100%;
+  cursor: pointer;
+  background-color: hsl(20, 100%, 39%);
+  border-radius: 20px;
+  border: none;
+  color: hsl(20, 50%, 98%);
+  padding: 10px;
+  margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+  .body {
+    flex-direction: column;
+  }
+  .main .productPart .product {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+  .main .productPart .product .imgDeskTop,
+  .main .productPart .product .imgMobile {
+    display: none;
+  }
+  .main .productPart .product .imgTablet {
+    display: block;
+  }
+}
+@media (max-width: 425px) {
+  .main .productPart .product {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .main .productPart .product .imgDeskTop,
+  .main .productPart .product .imgTablet {
+    display: none;
+  }
+  .main .productPart .product .imgMobile {
+    display: block;
+  }
+  .cart {
+    min-width: auto;
+  }
+}
+.orderConfirm {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.orderConfirm .confirmDiv {
+  width: 600px;
+  min-height: 350px;
+  background: hsl(20, 50%, 98%);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 15px;
+}
+.orderConfirm .confirmDiv .confirmImg {
+  width: 40px;
+  height: 40px;
+}
+.orderConfirm .confirmDiv .orderInfo {
+  background-color: hsl(13, 31%, 94%);
+  border-radius: 15px;
+}
+.orderConfirm .confirmDiv .orderInfo .orderInfoProduct {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(14, 25%, 72%);
+  margin: 20px 20px 0 20px;
+  padding-bottom: 20px;
+}
+.orderConfirm .confirmDiv .orderInfo .orderInfoProduct .orderInfoProductDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.orderConfirm .confirmDiv .orderInfo .orderInfoProduct .orderInfoProductDiv .orderProductImg {
+  width: 40px;
+  height: 40px;
+}
+.orderConfirm .confirmDiv .orderInfo .orderInfoProduct .orderInfoProductDiv .orderInfoProductDetail .productQuantity,
+.orderConfirm .confirmDiv .orderInfo .orderInfoProduct .orderInfoProductDiv .orderInfoProductDetail .productUnit {
+  color: hsl(20, 70%, 40%);
+}
+.orderConfirm .confirmDiv .orderInfo .orderInfoProduct .orderInfoProductDiv .orderInfoProductDetail .atsign {
+  padding-left: 15px;
+}
+.orderConfirm .confirmDiv .orderInfo .orderInfoProduct .orderInfoSingleProductTotalPrice {
+  display: flex;
+  align-items: center;
+}
+.orderConfirm .confirmDiv .orderInfo .orderInfoTotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.orderConfirm .confirmDiv .orderInfoBtn {
+  width: 100%;
+  cursor: pointer;
+  background-color: hsl(20, 100%, 39%);
+  border-radius: 20px;
+  border: none;
+  color: hsl(20, 50%, 98%);
+  padding: 10px;
+  margin-top: 15px;
+}/*# sourceMappingURL=styles.css.map */
